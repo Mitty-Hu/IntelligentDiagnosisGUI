@@ -151,6 +151,9 @@
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
     </widget>
    </widget>
@@ -182,6 +185,7 @@
     <bool>false</bool>
    </attribute>
    <addaction name="actionopen"/>
+   <addaction name="actionmodel"/>
    <addaction name="actionconnectServer"/>
    <addaction name="actioncolseServer"/>
   </widget>
@@ -312,7 +316,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>10</y>
+       <y>190</y>
        <width>231</width>
        <height>31</height>
       </rect>
@@ -332,162 +336,108 @@
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QLabel" name="label_KMeans">
+    <widget class="QRadioButton" name="radioButton_KMeans">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>310</y>
+       <width>91</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>3ds</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>K-Means</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_GaussianMixture">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>350</y>
+       <width>161</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>3ds</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Gaussian Mixture</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_Model">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>60</y>
-       <width>91</width>
+       <y>10</y>
+       <width>231</width>
        <height>31</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Microsoft YaHei</family>
-       <pointsize>11</pointsize>
-       <weight>75</weight>
-       <italic>false</italic>
-       <bold>true</bold>
-       <strikeout>false</strikeout>
-      </font>
-     </property>
-     <property name="text">
-      <string>K-Means:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_GaussianMixture">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>140</y>
-       <width>211</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Microsoft YaHei</family>
-       <pointsize>12</pointsize>
+       <pointsize>13</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="text">
-      <string>Gaussian Mixture:</string>
+      <string>Model</string>
      </property>
      <property name="alignment">
-      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QRadioButton" name="radioButton_k">
+    <widget class="QPushButton" name="pushButton_openVisualizationFile">
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>100</y>
-       <width>61</width>
-       <height>19</height>
+       <y>240</y>
+       <width>191</width>
+       <height>48</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>3ds</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>K</string>
-     </property>
-    </widget>
-    <widget class="QRadioButton" name="radioButton_Sample">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>100</y>
-       <width>91</width>
-       <height>19</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>3ds</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Sample</string>
-     </property>
-    </widget>
-    <widget class="QRadioButton" name="radioButton_k_2">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>190</y>
-       <width>61</width>
-       <height>19</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>3ds</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>K</string>
-     </property>
-    </widget>
-    <widget class="QRadioButton" name="radioButton_Sample_2">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>190</y>
-       <width>91</width>
-       <height>19</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>3ds</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Sample</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_MeanShift">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>230</y>
-       <width>211</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Microsoft YaHei</family>
+       <family>微软雅黑</family>
        <pointsize>12</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
-     <property name="text">
-      <string>Mean-Shift:</string>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
-     <property name="alignment">
-      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     <property name="text">
+      <string>OpenFile</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>icon/icons8-send-file-96.png</normaloff>icon/icons8-send-file-96.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>36</width>
+       <height>36</height>
+      </size>
      </property>
     </widget>
-    <widget class="QRadioButton" name="radioButton_Sample_3">
+    <widget class="QRadioButton" name="radioButton_1">
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>280</y>
-       <width>91</width>
+       <y>70</y>
+       <width>131</width>
        <height>19</height>
       </rect>
      </property>
@@ -498,7 +448,26 @@
       </font>
      </property>
      <property name="text">
-      <string>Sample</string>
+      <string>Multi Rolling</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>110</y>
+       <width>121</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>3ds</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Simulation</string>
      </property>
     </widget>
    </widget>
@@ -1296,6 +1265,15 @@
    </property>
    <property name="toolTip">
     <string>colseServer</string>
+   </property>
+  </action>
+  <action name="actionmodel">
+   <property name="icon">
+    <iconset>
+     <normaloff>icon/icons8-3d-model-80.png</normaloff>icon/icons8-3d-model-80.png</iconset>
+   </property>
+   <property name="text">
+    <string>model</string>
    </property>
   </action>
  </widget>
